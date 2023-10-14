@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <title>Student Profiles</title>
+    <style>
+        .student-info {
+            float: right;
+            width: 50%;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class = "heading"> BSIT-3D Student Information</div>
+    <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Search Student">
+        <button id="search-button">Search</button>
+    </div>
+    
+    <div class="container">
+
+
+        <div class="student-list">
+            <p>Names</p>
+            <ol id="student-list">
+                <!-- Student profiles will be dynamically added here -->
+            </ol>
+        </div>
+        <div class="student-info" id="student-info">
+            <div class = "title" id="name"></div>
+            <div class = "pic" id="image"></div>
+            
+
+
+            <!-- Student information will be displayed here -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

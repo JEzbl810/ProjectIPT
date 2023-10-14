@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Information</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+    }
+    .container {
+      display: flex;
+    }
+    #student-list {
+      flex: 1;
+      padding: 20px;
+    }
+    #student-info {
+      flex: 1;
+      padding: 20px;
+    }
+    .student-card {
+      display: inline-block;
+      margin: 10px;
+      cursor: pointer;
+    }
+    .student-card img {
+      max-width: 100px;
+    }
+    .search-container {
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Student Information</h1>
+    <div class="search-container">
+      <input type="text" id="search" placeholder="Search for a student">
+      <button id="search-button">Search</button>
+    </div>
+  </header>
+  <div class="container">
+    <div id="student-list">
+      <div class="student-card" onclick="showStudentInfo(1)">
+        <img src="IMG_3108.jpg" alt="Student 1">
+        <p>Student 1</p>
+      </div>
+      <div class="student-card" onclick="showStudentInfo(2)">
+        <img src="IMG_3131 2.JPG" alt="Student 2">
+        <p>Student 2</p>
+      </div>
+      <div class="student-card" onclick="showStudentInfo(3)">
+        <img src="IMG_3132 3.JPG" alt="Student 3">
+        <p>Student 3</p>
+      </div>
+    </div>
+    <div id="student-info">
+      <h2>Student Information</h2>
+      <p id="student-name"></p>
+      <p id="student-details"></p>
+    </div>
+  </div>
+  <script>
+    function showStudentInfo(studentId) {
+      // Sample student data
+      const students = [
+        { id: 1, name: "Student 1", details: "Details for Student 1" },
+        { id: 2, name: "Student 2", details: "Details for Student 2" },
+        { id: 3, name: "Student 3", details: "Details for Student 3" },
+      ];
+
+      const student = students.find(s => s.id === studentId);
+      if (student) {
+        document.getElementById("student-name").textContent = student.name;
+        document.getElementById("student-details").textContent = student.details;
+      }
+    }
+  </script>
+</body>
+</html>
